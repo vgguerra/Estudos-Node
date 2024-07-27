@@ -316,8 +316,8 @@ A inserção de um dado dentro de seu banco de dados é feita da seguinte forma:
 
  ````JavaScript
   Usuario.create({
-  nome:"Victor Evandro de Lima Guerra",
-  email: "victorevandro94@gmail.com",
+  nome:"Victor Guerra",
+  email: "testeGuerra@gmail.com",
   senha:"Teste123"
   })
   ```` 
