@@ -322,3 +322,50 @@ A inserção de um dado dentro de seu banco de dados é feita da seguinte forma:
   senha:"Teste123"
   })
   ```` 
+
+  # Aula 19 - HandleBars
+
+Handlebars é uma biblioteca de templates para JavaScript que facilita a criação de HTML dinâmico. Ele permite separar a lógica de apresentação da lógica de negócios, tornando a geração de conteúdo HTML mais simples e organizada. Ou seja, ela irá lhe permitir exibir  dados que vem do seu backend em seu HTML.
+
+#### Instalando o HandleBars
+
+````bash
+npm install --save express-handlebars
+````
+
+Para configura o `handlebars` em seu projeto, acrescente a seguinte linha de código:
+
+````JavaScript
+app.engine('handlebars'.handlebars({defaultLayot: 'main'}))
+    app.set('view engine',handlebars)
+````
+
+Após isso, crie as seguintes pastas da seguinte forma em seu projeto:
+
+````bash
+|Projeto
+    |-views 
+        |-layouts
+````
+
+E dentro de `layouts`, crie o arquivo `main.handlebars` .
+
+# Aula 21 - Enviando dados por um formulário
+Para enviar dados por um formulário, no HTML você deve configurar da seguinte forma:
+````HTML
+<form action="/add" method="post">
+    <p>Título</p>
+    <input type="text" name="titulo" id="">
+    <p>Conteúdo</p>
+    <textarea name="conteudo" id=""></textarea>
+    <button type="submit">Cadastrar postagem</button>
+</form>
+````
+
+Onde dentro do `form` as tags `action` e `post` equivalem a rota utilizada e ao método de envio, reespectivamente.
+
+#### Mas por que não user o método "GET"
+Pois o método get acaba sendo não seguro em alguns casos de envio de formulários, pois após realizar o submit, os dados cadastrados vão para sua URL, conforme o exemplo abaixo
+![Método GET sendo usado](imagens/Captura%20de%20tela%202024-07-27%20174112.png)
+
+![Método GET sendo usado](imagens/Captura%20de%20tela%202024-07-27%20174025.png)
