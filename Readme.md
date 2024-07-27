@@ -227,7 +227,7 @@ UPDATE _name_table SET nome = "Novo nome" WHERE nome = "Nome antigo"
 <br>
 <br>
 
-# Sequelize
+# Aula 16 - Sequelize
  O **Sequelize** é uma biblioteca par Node.JS que facilita a interação com bancos de dados relacionais como MySQL, PostgreSQL, SQLite e SQL Server. Ele permite que você trabalhe com bancos de dados usando objetos JavaScript, sem precisar escrever manualmente consultas SQL complexas. O Sequelize abstrai o banco de dados, fornecendo uma API de alto nível para gerenciar a persistência de dados.
 - [Documentação do sequelize](https://sequelize.org)
  
@@ -301,17 +301,17 @@ Onde os parâmetros são reespectivamente:
 
 ### O que signfica a linha "Postagem.sync({force: true})"
 
-    O método sync no Sequelize é responsável por garantir que os modelos definidos no código estejam sincronizados com o banco de dados, ou seja, ele cria as tabelas necessárias, incluindo colunas e chaves de acordo com a definição do modelo.
+O método sync no Sequelize é responsável por garantir que os modelos definidos no código estejam sincronizados com o banco de dados, ou seja, ele cria as tabelas necessárias, incluindo colunas e chaves de acordo com a definição do modelo.
 
-    Uso do Método sync
-    sync(): Cria a tabela se ela não existir. Se a tabela já existir, não faz nenhuma alteração.
+Uso do Método sync
+sync(): Cria a tabela se ela não existir. Se a tabela já existir, não faz nenhuma alteração.
 
-    sync({ force: true }): Força a recriação da tabela, deletando a tabela existente e criando uma nova. Isso significa que todos os dados na tabela serão apagados.
+sync({ force: true }): Força a recriação da tabela, deletando a tabela existente e criando uma nova. Isso significa que todos os dados na tabela serão apagados.
 
-    sync({ alter: true }): Ajusta a tabela existente para se adequar ao modelo, sem deletar a tabela ou perder dados.
+sync({ alter: true }): Ajusta a tabela existente para se adequar ao modelo, sem deletar a tabela ou perder dados.
 <br>
 
-## Inserindo dados dentro do bando de dados
+## Inserindo dados dentro do bando de dados utilizando o sequelize
 
 A inserção de um dado dentro de seu banco de dados é feita da seguinte forma:
 
