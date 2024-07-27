@@ -40,11 +40,11 @@ app.get("/",function(req,res){
 })
 ````
 
-No exemplo acima, estamos criando uma rota para a nosso página "principal", na qual a url seria `localhost:3001\` , que é o equivalente a `localhost:3001`
+No exemplo acima, estamos criando uma rota para a nosso página "principal", na qual a url seria `localhost:3001/` , que é o equivalente a `localhost:3001`
 
 > **Observação:** Dentro da function utilizada, os parâmetros `req` e `res`, reespectivamente são parâmetros de requisição e de resposta. No exemplo dado, estamos utilizando o parâmetro de resposta, com a função `send`, que "envia" uma mensagem para o servidor.
 
-Caso ainda não tenha ficado claro, no exemplo abaixo, estamos utilizando o conceito de definir uma rota para a página `localhost:3001\sobre` e imprimindo na tela a mensagem de bem-vindo :
+Caso ainda não tenha ficado claro, no exemplo abaixo, estamos utilizando o conceito de definir uma rota para a página `localhost:3001/sobre` e imprimindo na tela a mensagem de bem-vindo :
 
 #### Node.JS
 ````JavaScript
@@ -57,7 +57,7 @@ app.get("/sobre",function(req,res){
 
 ### Como passar uma parâmetro em uma rota?
 
-Para passar um parâmtro em uma rota, bata, após digitar sua rotar, incluir um `/: + {parâmetro}`, conforme o exemplo abaixo:
+Para passar um parâmtro em uma rota, basta, após digitar sua rotar, incluir um `/: + {parâmetro}`, conforme o exemplo abaixo:
 #### Node.JS
 ````JavaScript
 app.get("/ola/:cargo/:nome",function(req,res){
@@ -66,6 +66,7 @@ app.get("/ola/:cargo/:nome",function(req,res){
 ````
 
 Desta forma, seu navegador, ao abrir sua rota definida, irá imprimir da seguinte forma ao abrir o navegador na rota `localhost/ola/programador/predo`:
+    <br>
     <span style="color: #0EB5E3">Cargo:</span>
     <span style="color:pink">"Programador"</span>
     <br>
@@ -79,7 +80,7 @@ Neste caso, o que está ocorrendo, é que no momento em que o usuário digita os
 > **Observação 2:** Dentro de uma função de uma rota, só é possível enviar um `send`. Ou seja, o seguinte trecho de código estaria incorreto:
 ````JavaScript
 res.send("Ola");
-res.sendo("Mundo");
+res.send("Mundo");
 ````
 
 # Aula 10 - Carregando um arquivo HTML
@@ -227,7 +228,7 @@ UPDATE _name_table SET nome = "Novo nome" WHERE nome = "Nome antigo"
 <br>
 
 # Sequelize
-    O **Sequelize** é uma biblioteca par Node.JS que facilita a interação com bancos de dados relacionais como MySQL, PostgreSQL, SQLite e SQL Server. Ele permite que você trabalhe com bancos de dados usando objetos JavaScript, sem precisar escrever manualmente consultas SQL complexas. O Sequelize abstrai o banco de dados, fornecendo uma API de alto nível para gerenciar a persistência de dados.
+ O **Sequelize** é uma biblioteca par Node.JS que facilita a interação com bancos de dados relacionais como MySQL, PostgreSQL, SQLite e SQL Server. Ele permite que você trabalhe com bancos de dados usando objetos JavaScript, sem precisar escrever manualmente consultas SQL complexas. O Sequelize abstrai o banco de dados, fornecendo uma API de alto nível para gerenciar a persistência de dados.
 - [Documentação do sequelize](https://sequelize.org)
  
 Para utilizar o mySQL e o sequelize em seu projeto Node.js, inicie dentro da pasta de seu projeto como dependências o `mysql2` e o `sequelize` com o comando:
